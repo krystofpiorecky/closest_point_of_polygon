@@ -20,23 +20,13 @@ class Line
 
 	closestPoint(_x, _y)
 	{
-		let n = {
-			x: -this.vector.y,
-			y: this.vector.x
-		};
-
-		let k = (-this.vector.y*this.x1 + this.vector.y*_y - this.vector.x*this.y1 + _x*this.vector.x) / 
-				(this.vector.x*this.vector.x + this.vector.y*this.vector.y);
-
-		k = (_x*n.y + n.x*this.a.y - n.x*_y - n.y*this.a.x) / 
-			(this.vector.x*n.y - this.vector.y*n.x);
+		let k = (_x*this.vector.x - this.vector.y*this.a.y + this.vector.y*_y - this.vector.x*this.a.x) / 
+			(this.vector.x*this.vector.x + this.vector.y*this.vector.y);
 
 		let p = new Point(
 			this.x1 + this.vector.x * k,
 			this.y1 + this.vector.y * k
 		);
-
-		// console.log(k)
 
 		if(k <= 0) return this.a;
 		if(k >= 1) return this.b;
