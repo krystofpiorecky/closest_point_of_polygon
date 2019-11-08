@@ -7,8 +7,8 @@
 ## Closest point to a line
 
 ```javascript
-let k = (_x*n.y + n.x*this.a.y - n.x*_y - n.y*this.a.x) / 
-	(this.vector.x*n.y - this.vector.y*n.x);
+let k = (_x*this.vector.x - this.vector.y*this.a.y + this.vector.y*_y - this.vector.x*this.a.x) / 
+	(this.vector.x*this.vector.x + this.vector.y*this.vector.y);
 
 let p = new Point(
 	this.x1 + this.vector.x * k,
@@ -19,8 +19,8 @@ let p = new Point(
 ## Closest point to a line (between two points)
 
 ```javascript
-let k = (_x*n.y + n.x*this.a.y - n.x*_y - n.y*this.a.x) / 
-	(this.vector.x*n.y - this.vector.y*n.x);
+let k = (_x*this.vector.x - this.vector.y*this.a.y + this.vector.y*_y - this.vector.x*this.a.x) / 
+	(this.vector.x*this.vector.x + this.vector.y*this.vector.y);
 
 let p = new Point(
 	this.x1 + this.vector.x * k,
