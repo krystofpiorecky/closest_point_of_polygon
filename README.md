@@ -1,1 +1,5 @@
-# closest_point_of_polygon
+# Closest point of polygon
+
+* Calculating position of the closest point on a polygon.
+
+* Js canvas demo
